@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "todomvc-app-css": "^2.1.2",
+    "todomvc-common": "^1.0.5"
+  }
+}
