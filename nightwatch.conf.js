@@ -1,9 +1,11 @@
 const chromedriver = require('chromedriver')
 const seleniumServer = require('selenium-server')
+const percy = require('@percy/nightwatch')
 
 module.exports = {
   src_folders: ['tests'],
   output_folder: false,
+  custom_commands_path: [ percy.path ],
 
   selenium: {
     start_process: true,

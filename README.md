@@ -14,7 +14,7 @@ $ npm install
 $ open index.html
 ```
 
-To run the tests:
+To run the tests with snapshots:
 ```bash
 $ npm test
 ```

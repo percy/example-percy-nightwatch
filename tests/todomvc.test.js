@@ -27,6 +27,7 @@ module.exports = {
     browser
       .url(TEST_URL)
       .assert.visible('section.todoapp')
+      .percySnapshot()
   },
 
   'Accepts a new todo': function(browser) {
@@ -35,6 +36,7 @@ module.exports = {
       .sendKeys('.new-todo', 'New fancy todo')
       .sendKeys('.new-todo', browser.Keys.ENTER)
       .assert.containsText('.todo-list li:first-child label', 'New fancy todo')
+      .percySnapshot(browser.currentTest.name, { widths: [768, 992, 1200] })
   },
 
   'Lets you check off a todo': function(browser) {
@@ -45,6 +47,6 @@ module.exports = {
       .assert.containsText('.todo-count', '1 item left')
       .click('input.toggle')
       .assert.containsText('.todo-count', '0 items left')
-  }
-
-};
+      .percySnapshot('Checked-off todo')
+  },
+}
