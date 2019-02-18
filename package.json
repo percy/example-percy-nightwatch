@@ -5,7 +5,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@percy/agent": "^0.1.14",
+    "@percy/agent": "^0.1.15",
     "@percy/nightwatch": "1.0.2",
     "chromedriver": "^2.46.0",
     "http-server": "^0.11.1",
