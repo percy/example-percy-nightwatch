@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "test": "percy exec -- nightwatch"
+    "test": "percy exec -- nightwatch",
+    "test-win": "percy exec -- nightwatch.cmd"
   },
   "dependencies": {},
   "devDependencies": {
