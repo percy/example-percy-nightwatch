@@ -8,7 +8,7 @@
   "devDependencies": {
     "@percy/agent": "^0.3.1",
     "@percy/nightwatch": "1.0.3",
-    "chromedriver": "^2.46.0",
+    "chromedriver": "^73.0.0",
     "http-server": "^0.11.1",
     "nightwatch": "^1.0.19",
     "selenium-server": "^3.141.59",
