@@ -1,13 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "test": "percy exec -- nightwatch",
-    "test-win": "percy exec -- nightwatch.cmd"
+    "test": "percy exec -- nightwatch"
   },
   "dependencies": {},
   "devDependencies": {
-    "@percy/agent": "^0.3.1",
-    "@percy/nightwatch": "1.0.3",
+    "@percy/nightwatch": "^1.0.4",
     "chromedriver": "^73.0.0",
     "http-server": "^0.11.1",
     "nightwatch": "^1.0.19",
