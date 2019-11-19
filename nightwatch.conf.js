@@ -23,11 +23,12 @@ module.exports = {
         javascriptEnabled: true,
         chromeOptions: {
           args: ['headless'],
+          w3c: false
         },
       },
     },
 
-    chrome: {
+    Chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
         javascriptEnabled: true,
