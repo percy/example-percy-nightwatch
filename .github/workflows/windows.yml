@@ -9,7 +9,7 @@ jobs:
       - name: Install
         run: yarn
       - name: Install correct chromedriver
-        run: yarn add -D chromedriver@78
+        run: yarn add -D chromedriver@80
       - name: Percy Test
         uses: percy/exec-action@master
         with:
