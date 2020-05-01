@@ -147,10 +147,10 @@
     which "^2.0.1"
     winston "^3.0.0"
 
-"@percy/nightwatch@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@percy/nightwatch/-/nightwatch-1.0.5.tgz#7400c4953a9fd9292d82d68fdaa3f946a430cc7c"
-  integrity sha512-wgi6uOg5lAIIugv2qJ0sAI6toqZrdco2ygHUrmnWDIb9q3uBJsnkd8yIH7WmmQ/tgdUT1gW9QwTCg0ENI1eUrg==
+"@percy/nightwatch@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@percy/nightwatch/-/nightwatch-1.1.0.tgz#0bff6484dbb0be13a06e8bea596ba25bccd29430"
+  integrity sha512-w8zyG9ZDOUQ7UvXvPiZpgaAsdQaEudHBSh4X8GDfRwTrhepqZe3RzZE0eE6tBd4U5hkW5RgfwvhX93Tim1nFkQ==
   dependencies:
     "@percy/agent" "~0"
 
