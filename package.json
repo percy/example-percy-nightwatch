@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@percy/nightwatch": "^1.1.0",
-    "chromedriver": "~84.0.1",
+    "chromedriver": "~85.0.1",
     "http-server": "^0.12.3",
     "nightwatch": "^1.3.7",
     "selenium-server": "^3.141.59",
