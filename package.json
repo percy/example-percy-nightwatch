@@ -3,17 +3,14 @@
   "scripts": {
     "test": "percy exec -- nightwatch"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@percy/nightwatch": "^1.1.0",
-    "chromedriver": "~87.0.4",
+    "@percy/cli": "^1.0.0-beta.41",
+    "@percy/nightwatch": "^2.0.0-beta.2",
+    "geckodriver": "^1.22.2",
     "http-server": "^0.12.3",
     "nightwatch": "^1.5.1",
     "selenium-server": "^3.141.59",
     "todomvc-app-css": "^2.2.0",
     "todomvc-common": "^1.0.5"
-  },
-  "resolutions": {
-    "ecstatic": "3.2.0"
   }
 }

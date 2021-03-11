@@ -1,5 +1,4 @@
-const chromedriver = require('chromedriver');
-const seleniumServer = require('selenium-server');
+const geckodriver = require('geckodriver');
 const percy = require('@percy/nightwatch');
 
 module.exports = {
@@ -7,32 +6,20 @@ module.exports = {
   output_folder: false,
   custom_commands_path: [percy.path],
 
-  selenium: {
+  webdriver: {
     start_process: true,
-    server_path: seleniumServer.path,
-    check_process_delay: 7000,
-    log_path: false,
-    cli_args: {
-      'webdriver.chrome.driver': chromedriver.path
-    }
+    server_path: geckodriver.path
   },
 
   test_settings: {
     default: {
       desiredCapabilities: {
-        browserName: 'chrome',
-        javascriptEnabled: true,
-        chromeOptions: {
-          args: ['headless'],
-          w3c: false
+        browserName: 'firefox',
+        alwaysMatch: {
+          'moz:firefoxOptions': {
+            args: ['-headless']
+          }
         }
-      }
-    },
-
-    Chrome: {
-      desiredCapabilities: {
-        browserName: 'chrome',
-        javascriptEnabled: true
       }
     }
   }
