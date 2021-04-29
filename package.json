@@ -8,7 +8,7 @@
     "@percy/nightwatch": "^2.0.0",
     "geckodriver": "^1.22.3",
     "http-server": "^0.12.3",
-    "nightwatch": "^1.5.1",
+    "nightwatch": "^1.6.3",
     "selenium-server": "^3.141.59",
     "todomvc-app-css": "^2.2.0",
     "todomvc-common": "^1.0.5"
