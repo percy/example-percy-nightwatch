@@ -10,7 +10,7 @@
     "http-server": "^0.12.3",
     "nightwatch": "^1.6.3",
     "selenium-server": "^3.141.59",
-    "todomvc-app-css": "^2.4.0",
+    "todomvc-app-css": "^2.4.1",
     "todomvc-common": "^1.0.5"
   }
 }
