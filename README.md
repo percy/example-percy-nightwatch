@@ -10,7 +10,7 @@ app, forked at commit
 
 The tutorial assumes you're already familiar with JavaScript and
 [Nightwatch](https://nightwatchjs.org/) and focuses on using it with Percy. You'll still
-spend time introducing Nightwatch concepts.
+be able to follow along if you're not familiar with Nightwatch, but we won't spend time introducing Nightwatch concepts.
 
 The tutorial also assumes you have [Node 12+ with npm](https://nodejs.org/en/download/) and
 [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed.
