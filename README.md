@@ -20,7 +20,7 @@ The tutorial also assumes you have [Node 12+ with npm](https://nodejs.org/en/dow
 Clone the example application and install dependencies:
 
 ```bash
-$ git clone git@github.com:percy/example-percy-nightwatch.git
+$ git clone https://github.com/percy/example-percy-nightwatch.git
 $ cd example-percy-nightwatch
 $ npm install
 ```
