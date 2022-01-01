@@ -6,7 +6,7 @@
   "devDependencies": {
     "@percy/cli": "^1.0.0-beta.71",
     "@percy/nightwatch": "^2.0.0",
-    "geckodriver": "^2.0.4",
+    "geckodriver": "^3.0.1",
     "http-server": "^14.0.0",
     "nightwatch": "^1.7.12",
     "selenium-server": "^3.141.59",
