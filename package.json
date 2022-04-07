@@ -4,8 +4,8 @@
     "test": "percy exec -- nightwatch"
   },
   "devDependencies": {
-    "@percy/cli": "^1.0.0-beta.76",
-    "@percy/nightwatch": "^2.0.0",
+    "@percy/cli": "^1.0.5",
+    "@percy/nightwatch": "^2.0.1",
     "geckodriver": "^3.0.1",
     "http-server": "^14.1.0",
     "nightwatch": "^1.7.13",
