@@ -4,7 +4,7 @@
     "test": "MOZ_HEADLESS=1 percy exec -- nightwatch"
   },
   "devDependencies": {
-    "@percy/cli": "^1.2.1",
+    "@percy/cli": "^1.7.2",
     "@percy/nightwatch": "^2.1.0",
     "geckodriver": "^3.0.1",
     "http-server": "^14.1.1",
