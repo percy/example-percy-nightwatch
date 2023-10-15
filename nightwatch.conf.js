@@ -17,7 +17,7 @@ module.exports = {
         browserName: 'firefox',
         alwaysMatch: {
           'moz:firefoxOptions': {
-            args: ['-headless']
+            args: []
           }
         }
       }
