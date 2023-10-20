@@ -60,7 +60,7 @@ body {
 }
 
 .todoapp input::input-placeholder {
-	font-style: italic;
+	font-style: normal;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 0.4);
 }
