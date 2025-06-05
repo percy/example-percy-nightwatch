@@ -15,10 +15,9 @@ module.exports = {
     default: {
       desiredCapabilities: {
         browserName: 'firefox',
-        alwaysMatch: {
-          'moz:firefoxOptions': {
-            args: ['-headless']
-          }
+        'moz:firefoxOptions': {
+          args: ['-headless'],
+          binary: process.env.FIREFOX_BINARY || '/Applications/Firefox.app/Contents/MacOS/firefox'
         }
       }
     }
