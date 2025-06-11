@@ -5,20 +5,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: v1/${{ runner.os }}/node-14/${{ hashFiles('**/package-lock.lock') }}
-          restore-keys: v1/${{ runner.os }}/node-14/
+          key: v1/${{ runner.os }}/node-16/${{ hashFiles('**/package-lock.json') }}
+          restore-keys: v1/${{ runner.os }}/node-16/
       - name: Install dependencies
         run: npm install
       - name: Install Firefox
         run: |
           sudo apt-get update
-          sudo apt-get install -y firefox
+          sudo apt-get install -y firefox xvfb
+      - name: Setup Xvfb
+        run: |
+          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
       - name: Run tests
         uses: percy/exec-action@v0.3.1
         with:
@@ -26,3 +30,5 @@ jobs:
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
           FIREFOX_BINARY: /usr/bin/firefox
+          MOZ_HEADLESS: 1
+          DISPLAY: ":99"
