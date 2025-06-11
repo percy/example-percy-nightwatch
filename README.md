@@ -74,6 +74,17 @@ to know which organization and project to upload the snapshots to.
 You can view the screenshots in Percy now if you want, but there will be no visual comparisons
 yet. You'll see that Percy shows you that these snapshots come from your `tutorial-example` branch.
 
+If you encounter Firefox binary issues, you can specify the path to your Firefox binary:
+
+``` shell
+$ FIREFOX_BINARY="/path/to/firefox" npm run test
+```
+
+Common Firefox binary locations:
+- macOS: `/Applications/Firefox.app/Contents/MacOS/firefox`
+- Windows: `C:\\Program Files\\Mozilla Firefox\\firefox.exe`
+- Linux: `/usr/bin/firefox`
+
 ### Step 5
 
 Use your text editor to edit `index.html` and introduce some visual changes. For example, you can
