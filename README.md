@@ -130,7 +130,6 @@ The repository uses the following key dependency versions (updated):
 - @percy/cli: 1.31.3
 - @percy/nightwatch: 2.2.0
 - nightwatch: 3.12.2
-- chromedriver: 141.0.1
 - geckodriver: 6.0.2
 - todomvc-app-css: 2.4.3
 

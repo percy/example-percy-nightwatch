@@ -4,12 +4,11 @@
     "test": "MOZ_HEADLESS=1 percy exec -- nightwatch"
   },
   "devDependencies": {
-    "@percy/cli": "^1.31.3",
-    "@percy/nightwatch": "^2.2.0",
-    "geckodriver": "^6.0.2",
-  "chromedriver": "^141.0.1",
-    "http-server": "^14.1.1",
-    "nightwatch": "^3.12.2",
+  "@percy/cli": "^1.31.3",
+  "@percy/nightwatch": "^2.2.0",
+  "geckodriver": "^6.0.2",
+  "http-server": "^14.1.1",
+  "nightwatch": "^3.12.2",
     "selenium-server": "^3.141.59",
     "todomvc-app-css": "^2.4.3",
     "todomvc-common": "^1.0.5"
