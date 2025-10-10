@@ -1,4 +1,4 @@
-const geckodriver = require('geckodriver');
+const chromedriver = require('chromedriver');
 const percy = require('@percy/nightwatch');
 
 module.exports = {
@@ -8,16 +8,16 @@ module.exports = {
 
   webdriver: {
     start_process: true,
-    server_path: geckodriver.path
+    server_path: chromedriver.path
   },
 
   test_settings: {
     default: {
       desiredCapabilities: {
-        browserName: 'firefox',
+        browserName: 'chrome',
         alwaysMatch: {
-          'moz:firefoxOptions': {
-            args: ['-headless']
+          'goog:chromeOptions': {
+            args: ['--headless=new', '--disable-gpu', '--no-sandbox']
           }
         }
       }
