@@ -122,3 +122,15 @@ completed' button. The unchanged snapshots appear grouped together at the bottom
 
 From here, you can try making your own changes to the app and tests, if you like. If you do, re-run
 the tests  and you'll see any visual changes reflected in Percy.
+
+## Dependency versions
+
+The repository uses the following key dependency versions (updated):
+
+- @percy/cli: 1.31.3
+- @percy/nightwatch: 2.2.0
+- nightwatch: 3.12.2
+- geckodriver: 6.0.2
+- todomvc-app-css: 2.4.3
+
+These were updated to ensure compatibility with the local browser and Percy CLI.
