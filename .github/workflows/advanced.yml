@@ -4,6 +4,9 @@ name: Advanced — Percy
 # Web-DOM SDK; runs in --testing mode (no real PERCY_TOKEN required).
 on: [push, pull_request]
 
+permissions:
+  contents: read
+
 jobs:
   advanced:
     runs-on: ubuntu-latest
@@ -12,10 +15,10 @@ jobs:
       run:
         working-directory: advanced
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
       - name: Install jq + yq
         run: |
           sudo apt-get update -qq
