@@ -1,7 +1,6 @@
 name: Advanced — Percy
 
 # PER-8195 Phase 3 — advanced example for @percy/nightwatch.
-# Web-DOM SDK; runs in --testing mode (no real PERCY_TOKEN required).
 on: [push, pull_request]
 
 permissions:
@@ -19,32 +18,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install jq + yq
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq jq
-          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
-          sudo chmod +x /usr/local/bin/yq
       - name: Install advanced/ dependencies
         run: npm install
-      - name: Fetch shared advanced-snapshot assertion helper
-        # TODO(PER-8195 D8): pin to a tagged commit once percy-public-repos-parent
-        # publishes the scripts/ dir to a stable URL.
-        run: |
-          curl -fsSL -o /tmp/assert-advanced-snapshots.sh \
-            https://raw.githubusercontent.com/percy/percy-public-repos-parent/main/scripts/assert-advanced-snapshots.sh
-          chmod +x /tmp/assert-advanced-snapshots.sh
-      - name: Run nightwatch advanced (--testing) + capture /test/requests
+      - name: Run advanced tests
         env:
-          PERCY_TOKEN: fake_token
-        run: |
-          MOZ_HEADLESS=1 npx --no-install percy exec --testing -- bash -c '
-            npx --no-install nightwatch --config nightwatch.advanced.conf.js
-            ec=$?
-            curl -fsS http://localhost:5338/test/requests > advanced-requests.json || true
-            exit $ec
-          '
-      - name: Assert matrix-row coverage
-        env:
-          PERCY_REQUESTS_FILE: ${{ github.workspace }}/advanced/advanced-requests.json
-        run: /tmp/assert-advanced-snapshots.sh ./matrix.yml
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run test:advanced
