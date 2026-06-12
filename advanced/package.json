@@ -1,0 +1,17 @@
+{
+  "name": "example-percy-nightwatch-advanced",
+  "private": true,
+  "description": "Advanced Percy + Nightwatch example. Exercises the full applicable Percy SDK feature surface. See README.md for the matrix-row coverage.",
+  "scripts": {
+    "test:advanced": "MOZ_HEADLESS=1 percy exec -- nightwatch --config nightwatch.advanced.conf.js",
+    "test:advanced:ci": "PERCY_TOKEN=fake_token MOZ_HEADLESS=1 percy exec --testing -- nightwatch --config nightwatch.advanced.conf.js"
+  },
+  "devDependencies": {
+    "@percy/cli": "^1.31.13",
+    "@percy/nightwatch": "^2.2.0",
+    "geckodriver": "^6.0.2",
+    "http-server": "^14.1.1",
+    "nightwatch": "^3.12.2",
+    "selenium-server": "^3.141.59"
+  }
+}

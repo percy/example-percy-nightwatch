@@ -1,0 +1,26 @@
+name: Advanced — Percy
+
+# PER-8195 Phase 3 — advanced example for @percy/nightwatch.
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  advanced:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: advanced
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install advanced/ dependencies
+        run: npm install
+      - name: Run advanced tests
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npm run test:advanced

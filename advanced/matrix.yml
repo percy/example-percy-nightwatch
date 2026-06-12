@@ -1,0 +1,59 @@
+# PER-8195 Phase 3 — Nightwatch matrix-row mapping.
+# Test code: tests/todomvc_advanced.test.js (nightwatch BDD).
+
+sdk: nightwatch
+package: '@percy/nightwatch'
+language: javascript
+sdk_min_version: '2.2.0'
+cli_min_version: '1.31.13'
+
+rows:
+  - id: widths
+    state: covered
+    test: 'exercises widths'
+  - id: percy_css
+    state: covered
+    test: 'exercises percyCSS'
+  - id: min_height
+    state: covered
+    test: 'exercises minHeight'
+  - id: enable_javascript
+    state: covered
+    test: 'exercises enableJavaScript'
+  - id: responsive_snapshot_capture
+    state: covered
+    test: 'exercises responsiveSnapshotCapture'
+  - id: labels
+    state: covered
+    test: 'exercises labels'
+  - id: test_case
+    state: covered
+    test: 'exercises testCase'
+  - id: device_pixel_ratio
+    state: covered
+    test: 'exercises devicePixelRatio'
+  - id: browsers
+    state: covered
+    test: 'exercises browsers override'
+  - id: readiness_preset
+    state: covered
+    test: 'exercises readiness preset'
+
+  - id: scope
+    state: planned
+  - id: discovery
+    state: planned
+  - id: dom_transformation
+    state: planned
+  - id: regions
+    state: planned
+  - id: sync
+    state: planned
+
+  - id: env_percy_server_address
+    state: covered
+  - id: percy_yml_global_config
+    state: covered
+  - id: environment_info_reporting
+    state: covered
+    test: 'automatic via @percy/nightwatch client info'
